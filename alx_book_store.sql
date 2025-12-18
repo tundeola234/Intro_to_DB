@@ -36,6 +36,7 @@ CREATE TABLE Orders (
 --ORDER DETAILS
 CREATE TABLE Order_Details(
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
+    quantity DOUBLE,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id),
 );
