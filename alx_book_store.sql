@@ -8,7 +8,7 @@ CREATE TABLE Authors(
 );
 
 --BOOK TABLE
-CREATE TABLE Book(
+CREATE TABLE Books(
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
     price DOUBLE NOT NULL,
@@ -38,5 +38,5 @@ CREATE TABLE Orders (
 CREATE TABLE Order_Details(
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
-    FOREIGN KEY (book_id) REFERENCES Book(book_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id),
 );
